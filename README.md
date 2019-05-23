@@ -2,9 +2,7 @@
 
 Our [Nuxeo Elements tutorial](https://doc.nuxeo.com/nxdoc/nuxeo-elements-tutorial/) for [Angular](https://angular.io/)
 
-![in progress!](./screenshots/nuxeo-angular-inprogress.png)
-
-<img src="https://github.com/mlefree/nuxeo-elements-tutorial-react/raw/master/screenshots/nuxeo-react.png" style="width:100px;">
+<img src="https://github.com/mlefree/nuxeo-elements-tutorial-angular/raw/master/screenshots/nuxeo-angular-inprogress.png" style="width:100px;">
 
 **In Progress** and wait for :
 - [Jira on nuxeo-connection observer](https://jira.nuxeo.com/browse/ELEMENTS-955)
