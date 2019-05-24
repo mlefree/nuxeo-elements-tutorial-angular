@@ -6,7 +6,7 @@ Our [Nuxeo Elements tutorial](https://doc.nuxeo.com/nxdoc/nuxeo-elements-tutoria
 
 **In Progress** and wait for :
 - [Jira on nuxeo-connection observer](https://jira.nuxeo.com/browse/ELEMENTS-955)
-- [Jira on import-meta import](https://jira.nuxeo.com/browse/ELEMENTS-955)
+- [Jira on import.meta import](https://jira.nuxeo.com/browse/ELEMENTS-960)
 - Tests pb
 
 ## Project setup
