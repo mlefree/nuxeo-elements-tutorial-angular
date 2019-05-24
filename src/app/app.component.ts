@@ -2,7 +2,7 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 
 import '@nuxeo/nuxeo-elements/nuxeo-connection';
 import '@nuxeo/nuxeo-elements/nuxeo-page-provider';
-// TODO : import.meta PB : import '@nuxeo/nuxeo-ui-elements';
+import '@nuxeo/nuxeo-ui-elements/widgets/nuxeo-document-suggestion';
 
 @Component({
   selector: 'app-root',
@@ -10,19 +10,27 @@ import '@nuxeo/nuxeo-elements/nuxeo-page-provider';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+  router = {
+    browse: () => '#'
+  };
   title = 'My Nuxeo App';
+  doc;
+  params = {};
   documents = [];
-  query = 'SELECT * FROM DOCUMENT';
-  updateTime = Date.now();
+
   @ViewChild('pp') pp: ElementRef;
 
-  onResults(docs) {
-    this.documents = docs;
-    this.updateTime = Date.now();
+  select(doc) {
+    this.doc = doc;
+    this.params = doc ? { ecm_parentId: doc.uid } : {};
   }
 
-  update() {
-    this.pp.nativeElement.fetch();
+  up() {
+    this.select({uid: this.doc.parentRef});
+  }
+
+  onResults(docs) {
+    this.documents = docs.splice(0);
   }
 
 }
