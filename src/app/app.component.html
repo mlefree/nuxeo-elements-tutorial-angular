@@ -4,11 +4,6 @@
 </div>
 
 <button (click)="update()">Last refresh {{updateTime}}</button>
-<nuxeo-connection
-  [url]="nuxeoConnection.url"
-  [username]="nuxeoConnection.username"
-  [password]="nuxeoConnection.password"
-></nuxeo-connection>
 
 <!-- KO :
 <nuxeo-document-suggestion
@@ -17,18 +12,19 @@
 </nuxeo-document-suggestion>
 -->
 
-<nuxeo-page-provider #NPP
+<nuxeo-page-provider #pp
                      auto
                      page-size="5"
-                     [query]="nuxeoConnection.query"
+                     [query]="query"
+                     (current-page-changed)="onResults($event.detail.value)"
 ></nuxeo-page-provider>
 
 
 <div class="container" class="layout vertical center">
   <h2>First five results</h2>
   <ul>
-    <li *ngFor="let item of nuxeoList; let i = index">
-      {{i}} {{item}}
+    <li *ngFor="let doc of documents; let i = index">
+      {{i}} {{doc.title}}
     </li>
   </ul>
 </div>
