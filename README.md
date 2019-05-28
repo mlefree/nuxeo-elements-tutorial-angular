@@ -2,14 +2,15 @@
 
 Our [Nuxeo Elements tutorial](https://doc.nuxeo.com/nxdoc/nuxeo-elements-tutorial/) for [Angular](https://angular.io/)
 
-<img src="https://github.com/mlefree/nuxeo-elements-tutorial-angular/raw/master/screenshots/nuxeo-angular-inprogress.png" style="width:100px;">
+<img src="https://github.com/mlefree/nuxeo-elements-tutorial-angular/raw/master/screenshots/nuxeo-angular.png" style="width:100px;">
 
-**In Progress** and wait for :
-- [Jira on nuxeo-connection observer](https://jira.nuxeo.com/browse/ELEMENTS-955)
-- [Jira on import.meta import](https://jira.nuxeo.com/browse/ELEMENTS-960)
+**Work in Progress** and wait for :
+- [Jira on nuxeo-connection observer](https://jira.nuxeo.com/browse/ELEMENTS-955) but has a workaround (thanks to Nelson) : including *nuxeo-connection* in *index.html*, before any angular app manipulation.
+- [Jira on import.meta import](https://jira.nuxeo.com/browse/ELEMENTS-960) but looks ok when you import widget by widget (like import '@nuxeo/nuxeo-ui-elements/widgets/nuxeo-document-suggestion';)
 - Tests pb
 
 ## Project setup
+
 ```
 npm install
 ```
@@ -22,16 +23,19 @@ $ docker run --name mynuxeo -p 8080:8080 -d nuxeo
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm start
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
 ### Test
+
 ```
 npm test
 ```
